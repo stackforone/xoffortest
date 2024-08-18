@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ศูนย์ควบคุม</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page {
+            display: none;
+        }
+        /* ตั้งค่าให้หน้าแรกแสดงเมื่อเปิดเว็บ */
+        #home-page {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="page" id="home-page">
+    <div class="header">
+        <h2>อันดับ 1 ในไทย</h2>
+        <p>EXPERT ADVISORS(EA) บริการครบ จบในที่เดียว</p>
+    </div>
+
+    <div class="top-actions">
+        <div class="action">
+            <p>เติมเงิน</p>
+            <p>สนับสนุนออนไลน์ บิทคอยน์, USDT, ETH</p>
+        </div>
+        <div class="action">
+            <p>ประวัติการเทรด</p>
+            <p>ปุ่มทางลัด</p>
+        </div>
+        <div class="action">
+            <p>ฝ่ายบริการลูกค้า</p>
+            <p>เว็บบอร์ดออนไลน์</p>
+        </div>
+    </div>
+
+    <div class="tab-navigation">
+        <button class="tab active">คริปโตเคอร์เรนซี่</button>
+        <button class="tab">ฟอเร็กซ์</button>
+    </div>
+
+    <div class="crypto-list">
+        <div class="crypto-item">
+            <div class="crypto-info">
+                <img src="bitcoin-icon.png" alt="BTC">
+                <div>
+                    <p>บีทีซี/ดอลลาร์สหรัฐฯ</p>
+                    <p>เล่มที่: 58449.90</p>
+                </div>
+            </div>
+            <div class="crypto-graph">
+                <img src="graph-placeholder.png" alt="Graph">
+                <p>58449.90</p>
+                <p>-0.972%</p>
+            </div>
+        </div>
+        <div class="crypto-item">
+            <div class="crypto-info">
+                <img src="ethereum-icon.png" alt="ETH">
+                <div>
+                    <p>อีทีเอช/ดอลลาร์สหรัฐฯ</p>
+                    <p>เล่มที่: 2652.92</p>
+                </div>
+            </div>
+            <div class="crypto-graph">
+                <img src="graph-placeholder.png" alt="Graph">
+                <p>2652.92</p>
+                <p>-2.882%</p>
+            </div>
+        </div>
+        <!-- เพิ่มรายการเหรียญเพิ่มเติมตามต้องการ -->
+    </div>
+</div>
+
+    <div class="page" id="trade-page">
+    <div class="header">
+        <h2>เทรด Bitcoin/TetherUS</h2>
+        <p>อัตรา: 58,041.50 USDT</p>
+    </div>
+
+    <div class="trading-view">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div id="tradingview_btc_chart"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+                new TradingView.widget({
+                    "container_id": "tradingview_btc_chart",
+                    "autosize": true,
+                    "symbol": "BINANCE:BTCUSDT",
+                    "interval": "30",
+                    "timezone": "Asia/Bangkok",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "th",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_side_toolbar": false,
+                    "allow_symbol_change": true,
+                    "details": true,
+                    "studies": [
+                        "RSI@tv-basicstudies"
+                    ],
+                    "show_popup_button": true,
+                    "popup_width": "1000",
+                    "popup_height": "650"
+                });
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+
+    <div class="trade-buttons">
+        <button class="buy-button">ใส่</button>
+        <button class="sell-button">เรียก</button>
+    </div>
+
+    <div class="more-options">
+        <button class="more-button">มากกว่า</button>
+        <button class="alert-button">เตือน</button>
+    </div>
+</div>
+
+    <!-- ปรับเนื้อหาของหน้าเครื่องหมาย -->
+<div class="page" id="history-page">
+    <div class="header">
+        <h2>สัญญา ฝากเหรียญ</h2>
+        <p>โปรดศึกษารายละเอียด นโยบาย ข้อมูล และความเสี่ยงของกองทุน</p>
+    </div>
+    <div class="content">
+        <h3>เหรียญทั้งหมดของคุณ</h3>
+        <div class="coin-card">
+            <img src="bnb-icon.png" alt="BNB">
+            <div class="coin-info">
+                <p>BNB</p>
+                <p>Total: 0.00000 BNB</p>
+                <p>In Order: 0.00000 BNB</p>
+            </div>
+            <button>ฝากเหรียญ</button>
+        </div>
+        <div class="coin-card">
+            <img src="btc-icon.png" alt="BTC">
+            <div class="coin-info">
+                <p>BTC</p>
+                <p>Total: 0.00000 BTC</p>
+                <p>In Order: 0.00000 BTC</p>
+            </div>
+            <button>ฝากเหรียญ</button>
+        </div>
+        <div class="coin-card">
+            <img src="eth-icon.png" alt="ETH">
+            <div class="coin-info">
+                <p>ETH</p>
+                <p>Total: 0.00000 ETH</p>
+                <p>In Order: 0.00000 ETH</p>
+            </div>
+            <button>ฝากเหรียญ</button>
+        </div>
+    </div>
+</div>
+
+    <div class="page" id="wallet-page">
+        <div class="header">
+            <h2>กระเป๋า</h2>
+            <p>ทรัพย์สิน (USDT)</p>
+            <h3>0 USDT</h3>
+            <p>฿0.00 THB</p>
+            <p>ข้อมูล ณ : 10:07:21</p>
+        </div>
+
+        <div class="icon-grid">
+            <div class="icon-item">
+                <i class="fas fa-university"></i>
+                <p>ผูกบัญชีธนาคาร</p>
+                <p class="status" style="color:red;">ไม่ได้ระบุ</p>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-wallet"></i>
+                <p>ซื้อเหรียญ</p>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-wallet"></i>
+                <p>ฝากเหรียญ</p>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-money-bill-alt"></i>
+                <p>ถอนเงิน THB</p>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-money-bill-alt"></i>
+                <p>ถอนเงิน USDT</p>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-list-alt"></i>
+                <p>รายการถอนเงิน/เติมเงิน</p>
+            </div>
+        </div>
+
+        <div>
+            <h4>เหรียญทั้งหมดของคุณ</h4>
+            <div style="background-color: #333; padding: 10px; margin-bottom: 10px; border-radius: 8px;">
+                <p>USDT</p>
+                <p>Total: 0 USDT</p>
+                <p>Available: 0 USDT</p>
+                <p>In Order: 0.00 USDT</p>
+            </div>
+            <div style="background-color: #333; padding: 10px; border-radius: 8px;">
+                <p>BTC</p>
+                <p>Total: 0.000000 BTC</p>
+                <p>In Order: 0.000000 BTC</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="profile-page">
+    <div class="header">
+        <h2>FORFOTOX</h2>
+        <img src="thai.jpg" alt="โลโก้ไทย" class="flag-icon">
+        <div class="user-info">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+      
+    <div class="scroll-text-container">
+        <div class="scroll-text">ยินดีต้อนรับสู่ FORFOTOX พร้อมให้บริการแล้ววันนี้</div>
+    </div>
+
+        <div class="content">
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <i class="fas fa-user"></i>
+                    <p>ยืนยันตัวตน v1</p>
+                    <p class="status1">สำเร็จเเล้ว</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-user-check"></i>
+                    <p>ยืนยันตัวตน v2</p>
+                    <p class="status">สำเร็จเเล้ว</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-file-alt"></i>
+                    <p>ประวัติการเทรด</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-headset"></i>
+                    <p>ฝ่ายบริการลูกค้า</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fab fa-line"></i>
+                    <p>ติดต่อ Line</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>ติดต่ออีเมล์</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-download"></i>
+                    <p>โหลดแอพฯ</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-gavel"></i>
+                    <p>ระบบบริหารจัดการ</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>ออกจากระบบ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wallet-container">
+        <div class="wallet-header">
+    <div>ยอดเงินคงเหลือ</div>
+    <div class="icon"><i class="fas fa-wallet"></i></div> <!-- ใช้ไอคอนกระเป๋าเงินจาก Font Awesome -->
+</div>
+        <div class="wallet-balance">฿4,760,000</div> <!-- ยอดรวมเงินคงเหลือ -->
+
+        <div class="crypto-list">
+    <!-- Bitcoin -->
+    <div class="crypto-item">
+        <i class="fab fa-bitcoin"></i>
+        <span>฿BTC: 0.588</span>
+    </div>
+    <!-- Ethereum -->
+    <div class="crypto-item">
+        <i class="fab fa-ethereum"></i>
+        <span>฿ETH: 1.200</span>
+    </div>
+    <!-- USDT (ใช้ไอคอนเงินทั่วไปสำหรับ USDT) -->
+    <div class="crypto-item">
+        <i class="fas fa-dollar-sign"></i>
+        <span>฿USDT: 8000</span>
+    </div>
+</div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="#" id="home" class="active" onclick="showPage('home-page')">
+            <i class="fas fa-home"></i>
+            หน้าแรก
+        </a>
+        <a href="#" id="trade" onclick="showPage('trade-page')">
+            <i class="fas fa-dollar-sign"></i>
+            ซื้อขาย
+        </a>
+        <a href="#" id="history" onclick="showPage('history-page')">
+            <i class="fas fa-file-alt"></i>
+            เครื่องหมาย
+        </a>
+        <a href="#" id="wallet" onclick="showPage('wallet-page')">
+            <i class="fas fa-wallet"></i>
+            กระเป๋า
+        </a>
+        <a href="#" id="profile" onclick="showPage('profile-page')">
+            <i class="fas fa-user"></i>
+            ศูนย์บุคคล
+        </a>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+
+            var navLinks = document.querySelectorAll('.bottom-nav a');
+            navLinks.forEach(function(nav) {
+                nav.classList.remove('active');
+            });
+
+            document.querySelector('#' + pageId.split('-')[0]).classList.add('active');
+        }
+    </script>
+</body>
+</html>
